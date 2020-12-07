@@ -36,6 +36,10 @@ When('se elimina la clave {string}', function (clave) {
     contexto.lista.delete(clave);
 });
 
+When('se busca la clave {string}', function (clave) {
+    contexto.encontrado = contexto.lista.find(clave);
+});
+
 /**
  * +++++++++++++++++++
  * ++++++ THENs +++++++
@@ -44,3 +48,15 @@ When('se elimina la clave {string}', function (clave) {
 Then('la lista tiene {int} elemento(s) almacenado(s)', function (cantidad) {
     expect(contexto.lista.count()).to.equal(cantidad);
 });
+
+Then('se obtiene el valor NaN', function () {
+    expect(contexto.encontrado).is.NaN;
+});
+
+Then('se obtiene el valor {string}', function (valor) {
+    expect(contexto.encontrado).is.equal(valor);
+});
+
+// Then('la lista tiene {int} elemento', function (cantidad) {
+//     expect(contexto.lista.count()).to.equal(cantidad);
+// });

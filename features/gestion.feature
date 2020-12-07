@@ -21,3 +21,9 @@ Escenario: Eliminar un elemento de una lista con elementos
     | "tres" | 3 |
     Cuando se elimina la clave "dos"
     Entonces la lista tiene 2 elementos almacenados
+
+Escenario: Agregar un elemento existente
+    Dado una lista con los siguientes elementos
+    | "uno" | 1 |
+    Cuando se agrega la pareja {"uno": 2}
+    Entonces la lista tiene 1 elemento almacenado
