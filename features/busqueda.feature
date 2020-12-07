@@ -13,11 +13,6 @@ Escenario: Buscar un valor en una lista vacía
 Escenario: Lista con un elemento
     Dado una lista con los siguientes elementos
     | "clave" | "valor"|
+    | "clave 2"| "valor 2" |
     Cuando se busca la clave "clave"
     Entonces se obtiene el valor "valor"
-
-Escenario: Actualizar un elemento existente
-    Dado una lista con los siguientes elementos
-    | "clave" | "valor" |
-    Cuando se agrega la pareja {"clave": "valor 2"}
-    Entonces se obtiene el valor "valor 2"

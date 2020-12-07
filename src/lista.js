@@ -32,14 +32,15 @@ module.exports = class Lista {
 
     delete(clave) {
         const index = this.indexOf(clave);
-        if(!isNaN(index)) {
+        if (!isNaN(index)) {
             this.#elementos.splice(index, 1);
         }
     }
 
-    find(clave) {;
+    find(clave) {
+        ;
         const index = this.indexOf(clave);
-        if(!isNaN(index)) {
+        if (!isNaN(index)) {
             return this.#elementos[index][clave];
         }
         return NaN;
@@ -47,5 +48,18 @@ module.exports = class Lista {
 
     count() {
         return this.#elementos.length;
+    }
+
+    orderedKeys() {
+        this.#elementos.sort((a, b) => {
+            const key = Object.keys(a)[0];
+            const keyn = Object.keys(b)[0];
+            return (key < keyn) ? -1 : 1;
+        })
+        let ordered = [];
+        this.#elementos.forEach(element => {
+            ordered.push(Object.keys(element)[0]);
+        });
+        return ordered;
     }
 }

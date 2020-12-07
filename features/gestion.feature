@@ -27,3 +27,10 @@ Escenario: Agregar un elemento existente
     | "uno" | 1 |
     Cuando se agrega la pareja {"uno": 2}
     Entonces la lista tiene 1 elemento almacenado
+
+Escenario: Actualizar un elemento existente
+    Dado una lista con los siguientes elementos
+    | "clave" | "valor 1" |
+    Cuando se agrega la pareja {"clave": "valor 2"}
+    Cuando se busca la clave "clave"
+    Entonces se obtiene el valor "valor 2"
