@@ -1,0 +1,28 @@
+{
+  "name": "testing_bdd",
+  "version": "1.0.0",
+  "description": "Ejercitacion de BDD para Testing - CEIoT - FIUBA - 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --publish-quiet",
+    "coverage": "nyc --reporter=html cucumber-js --publish-quiet"
+  },
+  "nyc": {
+    "exclude": "features/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javosmar/testing_bdd.git"
+  },
+  "author": "Ing. Martin Acosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javosmar/testing_bdd/issues"
+  },
+  "homepage": "https://github.com/javosmar/testing_bdd#readme",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0-rc.0",
+    "chai": "^4.2.0",
+    "nyc": "^15.1.0"
+  }
+}
